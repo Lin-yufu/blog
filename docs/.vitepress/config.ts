@@ -8,8 +8,8 @@ const APP_BASE_PATH = basename(process.env.GITHUB_REPOSITORY || '')
 
 export default defineConfig({
   outDir: '../dist',
-  base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
-
+  base: '/blog/',
+  // base: APP_BASE_PATH ? `/${APP_BASE_PATH}/` : '/',
   lang: 'zh-CN',
   title: '小林的博客',
   description: '记录成长过程中的内容输出',
