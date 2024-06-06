@@ -38,7 +38,7 @@ export default {
         () =>
           updateHomePageStyle(
             /* /vitepress-nav-template/ 是为了兼容 GitHub Pages */
-            location.pathname === '/' || location.pathname === '/vitepress-nav-template/',
+            location.pathname === '/' || location.pathname === '/blog/',
           ),
         { immediate: true },
       )
