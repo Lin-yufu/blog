@@ -38,9 +38,7 @@ jobs:
       - name: Install pnpm
         uses: pnpm/action-setup@v3
         with:
-<<<<<<< HEAD
           version: 8
-=======
           node-version: 18
           cache: npm # 或 pnpm / yarn
       - name: Setup Pages
@@ -53,7 +51,6 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/dist
->>>>>>> ad5a2a2000e0166c4bba3f9d6c4767c048128593
 
       # 设置 node 版本
       - name: Use Node.js ${{ matrix.node-version }}
