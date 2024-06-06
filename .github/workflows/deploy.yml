@@ -7,6 +7,7 @@ on:
   # 使用 `master` 分支作为默认分支，请将其更改为 `master`
   push:
     branches: [main]
+    
 
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
@@ -39,6 +40,11 @@ jobs:
         with:
           node-version: 20
           cache: npm # 或 pnpm / yarn
+      # 安装 pnpm
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Install dependencies
