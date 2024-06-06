@@ -49,20 +49,21 @@ jobs:
               cache: 'pnpm'
 
           # 打包静态文件
+          - name: pnpm install
+            env:
+              APP_BASE_PATH: /${{ github.repository }}
+            run: pnpm install && pnpm run
+        # build the project
+        
           - name: Build
             env:
               APP_BASE_PATH: /${{ github.repository }}
-            run: pnpm install && pnpm run build
-                 pnpm run build
-  # 部署工作
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+            run: pnpm run build
+        # deploy
+          - name: Deploy
+            uses: peaceiris/actions-gh-pages@v3
+            with:
+               github_token: ${{ secrets.GITHUB_TOKEN }}
+               publish_dir: docs/.vitepress/dist 
+          
+
