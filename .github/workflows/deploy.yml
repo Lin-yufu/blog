@@ -63,8 +63,7 @@ jobs:
           - name: Deploy
             uses: JamesIves/github-pages-deploy-action@4.1.4
             with:
-               GITHUB_TOKEN: ${{ secrets.Action }}   /* 注意：这行是新加的 */
-               ACCESS_TOKEN: ${{ secrets.Action }}
+               GITHUB_TOKEN: ${{ secrets.ACTION}}
                BRANCH: gh-pages
                FOLDER: dist
           
