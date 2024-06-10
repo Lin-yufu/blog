@@ -49,7 +49,7 @@ jobs:
             run: pnpm run build
         # deploy
           - name: Deploy
-            uses: peaceiris/actions-gh-pages@v3
+            uses: JamesIves/github-pages-deploy-action@releases/v4
             with:
                GITHUB_TOKEN: ${{secrets.ACTION_TOKEN}}
                BRANCH: gh-pages
