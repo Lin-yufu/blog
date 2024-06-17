@@ -13,16 +13,10 @@ export const sidebar: DefaultTheme.Config['sidebar'] = {
             ]
         }
     ],
-    'computer_science': [
-        {
-            text: '计算机内功',
-            items: [
-                { text: "操作系统", link: '/computer_science/os/' },
-                { text: "数据结构算法", link: '/computer_science/data_structure/' },
-                { text: "计算机网络", link: '/computer_science/computer_network/' },
-                { text: "设计模式", link: '/computer_science/design_pattern/' },
-            ]
-        }
+    '/computer_science/data_structure/': [
+        { text: "数据结构算法", link: '/computer_science/data_structure/' },
+        { text: "java 常用api", link: '/computer_science/data_structure/api' },
+
     ],
     '/framework/': [
         {
