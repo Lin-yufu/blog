@@ -6,7 +6,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   { text: 'Java学习',
     items: [
       {text: "Java基础",link: '/java/javase/'},
-      {text: "Java集合",link: '/java/collections/'},
+      { text: "Java集合", link: '/java/collections/' },
       {text: "Java并发",link: '/java/concurrent/'},
       {text: "JVM",link: '/java/jvm/'},
       {text: "Java IO",link: '/java/io/'},
@@ -15,7 +15,13 @@ export const nav: DefaultTheme.Config['nav'] = [
   { text: '计算机内功',
     items:[
       {text: "操作系统",link: '/computer_science/os/'},
-      {text: "数据结构算法",link: '/computer_science/data_structure/'},
+      {
+        text: "算法数据结构",
+        items:[
+          {text: "算法",link: '/computer_science/data_structure/'},
+          {text: "Java常用api",link: '/computer_science/data_structure/api'},
+        ]
+      },
       {text: "计算机网络",link: '/computer_science/computer_network/'},
       {text: "设计模式",link: '/computer_science/design_pattern/'},
     ] },
